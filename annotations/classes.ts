@@ -1,4 +1,12 @@
+interface CarInterface {
+    color: string
+}
+
 class Vehicle {
+    constructor(public color: string) {
+        
+    }
+
     protected drive(): void {
         console.log("I'm driving")
     }
@@ -8,11 +16,11 @@ class Vehicle {
     }
 }
 
-class Car extends Vehicle {
+class Car extends Vehicle implements CarInterface  {
     drive(): void {
         console.log("I'm a car and I'm driving")
     }
 }
 
-const car = new Car()
-car.drive()
+const car = new Car('yellow')
+console.log(car)
