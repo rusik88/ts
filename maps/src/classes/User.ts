@@ -1,19 +1,23 @@
-//import faker from 'faker'
+import faker from 'faker'
+import { MappableInterface } from '../interfaces/MappableInterface'
 
-export class User {
-    name: string = 'Test'
+export class User implements MappableInterface {
+    name: string = 'Test 111'
+
     location: {
         lat: number,
         lng: number
     }
 
     constructor() {
-        //this.name = faker.name.firstName()
-        /*this.location = {
+        this.name = faker.name.firstName()
+        this.location = {
             lat: parseFloat(faker.address.latitude()),
-            lng: parseFloat(faker.address.longitude()),
-        }*/
-        //this.location.lat = faker.address.latitude()
-        //this.location.lng = faker.address.longitude()
+            lng: parseFloat(faker.address.longitude())
+        }
     }
-}
+
+    markerContent() {
+        return this.name
+    }
+} 
