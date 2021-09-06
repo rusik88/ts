@@ -1,19 +1,15 @@
-export class Sorter {
-    public collection: number[]
+export abstract class Sorter {
 
-    constructor(arr: number[]) {
-        this.collection = arr
-    }
+    abstract compare(leftIndex: number, rightIndex:number): boolean
+    abstract swap(leftIndex: number, rightIndex:number): void
+    abstract length(): number
 
     public sort(): void {
-        const { length } = this.collection;
-        let el1: number
-        for(let w = length; w > 0; w--) {
+        const length  = this.length();
+        for(let w = length - 1; w > 0; w--) {
             for(let i = 0; i < w; i++) {
-                if(this.collection[i] > this.collection[i + 1]) {
-                    el1 = this.collection[i]
-                    this.collection[i] = this.collection[i + 1]
-                    this.collection[i + 1] = el1
+                if(this.compare(i, i + 1)) {
+                    this.swap(i, i + 1)
                 }
             }
         }

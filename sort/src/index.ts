@@ -1,28 +1,25 @@
 import { Sorter } from './classes/Sorter'
+import { NumbersCollection } from './classes/NumbersCollection'
+import { CharactersCollection } from './classes/CharactersCollection' 
+import { LinkedListCollection } from './classes/LinkedListCollection'
 
-const sorter = new Sorter([5, -4, 7, -3, 4, 9, 10])
-sorter.sort()
-console.log(sorter.collection)
+const collection  = new NumbersCollection([-1, -10, 4, 2])
+collection.sort()
+console.log(collection.data) 
+//compare.const collectionStr  = new CharactersCollection('Testba')
 
-const str = 'Test'
-console.log(str[0])
+//const sorter = new Sorter(collectionStr)
+//sorter.sort()
+//console.log(sorter.collection)
 
+//const linkedList = new LinkedListCollection()
+//comparelinkedList.add(100)
+//linkedList.add(20)
+//linkedList.add(-2)
+//linkedList.add(4)
 
+//const sorter2 = new Sorter(linkedList)
+//sorter2.sort()
+//linkedList.printr()
 
-/*type NS = number | string
-const arr = ['Андрей', 'Иван', 'Степан', 'Руслан', "Маусим", "Евгений"]
-let sort_arr: number[]
-let el1: NS, el2: NS
-for(let w = arr.length; w > 0; w--) {
-    for(let i = 0; i < w; i++) {
-        if(arr[i] > arr[i + 1]) {
-            el1 = arr[i]
-            el2 = arr[i + 1]
-            arr[i] = arr[i + 1]
-            arr[i + 1] = el1
-        }
-    }
-}
-
-console.log(arr)*/
 
