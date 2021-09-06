@@ -13,6 +13,7 @@
   "dependencies": {
     "@types/faker": "^5.5.8",
     "@types/googlemaps": "^3.43.3",
+    "@types/node": "^16.7.10",
     "axios": "^0.21.1",
     "faker": "^5.5.3"
   },

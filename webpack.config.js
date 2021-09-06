@@ -1,12 +1,13 @@
 const path = require('path')
+const folter = 'football'
 
 module.exports = (mode = 'development') => {
     const isProduction = mode === 'production';
     return {
-        entry: "./sort/src/index.ts",
+        entry: "./football/src/index.ts",
         mode: 'development',                          
         output: {
-            path: __dirname + '/sort',	
+            path: __dirname + '/'+folter,	
             filename: "bundle.js"
         },
         module: {
@@ -22,7 +23,7 @@ module.exports = (mode = 'development') => {
             extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
         },
         devServer: {
-			contentBase: path.join(__dirname, 'sort'),
+			contentBase: path.join(__dirname, folter),
 			compress: true,
 			port: 9200
 		}
