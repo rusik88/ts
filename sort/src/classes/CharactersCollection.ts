@@ -1,7 +1,10 @@
 import { SortInterface } from "../interfaces/SortInterface";
+import { Sorter } from "./Sorter"
 
-export class CharactersCollection implements SortInterface {
-    constructor(public data: string) {}
+export class CharactersCollection extends Sorter implements SortInterface {
+    constructor(public data: string) {
+        super()
+    }
 
     length(): number {
         return this.data.length 

@@ -1,4 +1,5 @@
 import { SortInterface } from '../interfaces/SortInterface'
+import { Sorter } from './Sorter'
 
 class NodeClass {
     next: NodeClass | null = null
@@ -8,12 +9,11 @@ class NodeClass {
     }
 }
 
-export class LinkedListCollection implements SortInterface {
+export class LinkedListCollection extends Sorter implements SortInterface {
     head: NodeClass | null = null
 
     add(data: number): void {
         const node = new NodeClass(data)
-        console.log(this.head)
         if(!this.head) {
             this.head = node
             return
@@ -26,7 +26,7 @@ export class LinkedListCollection implements SortInterface {
         tail.next = node
     }
 
-    get length(): number {
+    length(): number {
         if(!this.head) {
             return 0
         }
