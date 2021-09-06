@@ -9,3 +9,5 @@ const company: MappableInterface = new Company()
 map.addMappableMarker(user)
 map.addMappableMarker(company)
 map.getMap()
+
+console.log('test')
