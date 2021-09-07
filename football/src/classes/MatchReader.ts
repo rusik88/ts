@@ -1,8 +1,8 @@
 import { DataReaderInterface } from '../interfaces/MatchReaderInterface'
 import { DateStringToDate } from '../helper'
-import { MatchResult } from '../enums/MatchResultEnum'
+import { MatchResultEnum } from '../enums/MatchResultEnum'
+import { MatchType } from '../types/MatchDataType'
 
-type MatchType = [Date, string, string, number, number, MatchResult, string]
 
 export class MatchReader {
 
@@ -19,7 +19,7 @@ export class MatchReader {
                 row[2],
                 parseInt(row[3]),
                 parseInt(row[4]),
-                row[5] as MatchResult,
+                row[5] as MatchResultEnum,
                 row[6]
             ]
         })

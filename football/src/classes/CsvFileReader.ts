@@ -12,6 +12,5 @@ export class CsvFileReader {
         .map((row: string): string[] => {
             return row.split(',')
         })
-        
     }
 }
